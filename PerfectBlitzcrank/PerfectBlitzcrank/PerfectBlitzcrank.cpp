@@ -46,16 +46,15 @@ void  Menu()
 	RMenu = MainMenu->AddMenu("R Settings");
 	Drawings = MainMenu->AddMenu("Drawings");
 
-	AutoQ = QMenu->CheckBox("Auto Q", true);
 	ComboQ = QMenu->CheckBox("Use Q", true);
-	HarassManaQ = QMenu->AddInteger("Mana Manager(%)(AutoQ)", 1, 100, 60);
+	HarassManaQ = QMenu->AddInteger("Mana Manager(%)", 1, 100, 60);
 
 	ComboW = WMenu->CheckBox("Use W", true);
 
 	AutoE = EMenu->CheckBox("Auto E", true);
 	ComboE = EMenu->CheckBox("Use E", true);
 
-	AutoUlt = EMenu->CheckBox("Auto R(if 3 enemies in Range", true);
+	AutoUlt = RMenu->CheckBox("Auto R(if 3 enemies in Range", true);
 	ComboR = RMenu->CheckBox("R When X Enemies in Range ", true);
 	UltEnemies = RMenu->AddInteger("Minimum enemies to hit with R", 1, 5, 2);
 
@@ -75,7 +74,7 @@ void LoadSpells()
 	Q->SetOverrideRange(800);
 	W->SetOverrideRange(1150);
 	E->SetOverrideRange(155);
-	R->SetOverrideRange(545);
+	R->SetOverrideRange(600);
 
 }
 
